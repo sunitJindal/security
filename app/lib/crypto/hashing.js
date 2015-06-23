@@ -6,3 +6,10 @@ exports.sha256 = function(data){
 
   return sha.digest('hex');
 }
+
+exports.md5 = function(data){
+  var hash = crypto.createHash('md5');
+  hash.update(data);
+
+  return hash.digest('hex');
+}
